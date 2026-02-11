@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تابع حساباتي على منصات التواصل الاجتماعي المختلفة">
+    <title>My social media accounts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="themeBtn" class="theme-toggle" aria-label="تبديل المظهر">☀️</button>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="profile-section">
+                <img src="1.jpg" alt="صورتي" class="profile-pic">
+                <h1 class="title">My social media accounts</h1>
+                <p class="subtitle">تابعني على جميع المنصات</p>
+            </div>
+
+            <div class="buttons">
+                <a href="https://www.facebook.com/profile.php?id=61573379105207" target="_blank" class="btn facebook" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://instagram.com/YOUR_USERNAME" target="_blank" class="btn instagram" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.youtube.com/@the_poor_gamer" target="_blank" class="btn youtube" title="YouTube">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>تم البرمجة بواسطة <span class="highlight">The Poor Gamer</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // حماية الأكواد من السرقة
+        // منع النقر بزر الفأرة الأيمن
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            window.location.href = 'protect.html';
+        });
+
+        // منع اختيار النص
+        document.addEventListener('selectstart', (e) => {
+            e.preventDefault();
+        });
+
+        // منع المفاتيح المختصرة
+        document.addEventListener('keydown', (e) => {
+            // F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+                window.location.href = 'protect.html';
+            }
+            // Ctrl+Shift+I (فتح أدوات المطور)
+            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+                window.location.href = 'protect.html';
+            }
+            // Ctrl+Shift+C (فحص العنصر)
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                window.location.href = 'protect.html';
+            }
+            // Ctrl+Shift+J (فتح وحدة التحكم)
+            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+                e.preventDefault();
+                window.location.href = 'protect.html';
+            }
+        });
+
+        // منع الضغط على زر الماوس الأيمن مع Ctrl+Shift
+        document.addEventListener('mousedown', (e) => {
+            if (e.button === 2) { // زر الفأرة الأيمن
+                window.location.href = 'protect.html';
+            }
+        });
+    </script>
+</body>
+</html>
