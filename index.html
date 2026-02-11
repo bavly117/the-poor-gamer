@@ -41,50 +41,7 @@
         <p>تم البرمجة بواسطة <span class="highlight">The Poor Gamer</span></p>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        // حماية الأكواد من السرقة
-        // منع النقر بزر الفأرة الأيمن
-        document.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            window.location.href = 'protect.html';
-        });
-
-        // منع اختيار النص
-        document.addEventListener('selectstart', (e) => {
-            e.preventDefault();
-        });
-
-        // منع المفاتيح المختصرة
-        document.addEventListener('keydown', (e) => {
-            // F12
-            if (e.key === 'F12') {
-                e.preventDefault();
-                window.location.href = 'protect.html';
-            }
-            // Ctrl+Shift+I (فتح أدوات المطور)
-            if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-                e.preventDefault();
-                window.location.href = 'protect.html';
-            }
-            // Ctrl+Shift+C (فحص العنصر)
-            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-                e.preventDefault();
-                window.location.href = 'protect.html';
-            }
-            // Ctrl+Shift+J (فتح وحدة التحكم)
-            if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-                e.preventDefault();
-                window.location.href = 'protect.html';
-            }
-        });
-
-        // منع الضغط على زر الماوس الأيمن مع Ctrl+Shift
-        document.addEventListener('mousedown', (e) => {
-            if (e.button === 2) { // زر الفأرة الأيمن
-                window.location.href = 'protect.html';
-            }
-        });
-    </script>
+    <script src="protect.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
