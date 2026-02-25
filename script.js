@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-const t=document.getElementById("themeBtn"),p=window.matchMedia("(prefers-color-scheme: dark)").matches;if(localStorage.getItem("theme")==="dark"||(p&&!localStorage.getItem("theme"))){document.body.classList.add("dark");t.textContent="🌙";}else{t.textContent="☀️";}t.addEventListener("click",function(){document.body.classList.toggle("dark");if(document.body.classList.contains("dark")){t.textContent="🌙";localStorage.setItem("theme","dark");}else{t.textContent="☀️";localStorage.setItem("theme","light");}});document.querySelectorAll(".btn").forEach(function(e){e.addEventListener("click",function(o){const r=document.createElement("span"),n=this.getBoundingClientRect(),s=Math.max(n.width,n.height),i=o.clientX-n.left-s/2,a=o.clientY-n.top-s/2;r.style.width=r.style.height=s+"px";r.style.left=i+"px";r.style.top=a+"px";r.classList.add("ripple");this.appendChild(r);setTimeout(()=>r.remove(),600);});});
-=======
 // Gaming Theme JavaScript - Professional Gamer Style
-
-// Theme Toggle
-const t = document.getElementById("themeBtn");
-const p = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-if (localStorage.getItem("theme") === "dark" || (p && !localStorage.getItem("theme"))) {
-    document.body.classList.add("dark");
-    t.innerHTML = "<span class='toggle-icon'>🌙</span>";
-} else {
-    t.innerHTML = "<span class='toggle-icon'>🎮</span>";
-}
-
-t.addEventListener("click", function() {
-    document.body.classList.toggle("dark");
-    if (document.body.classList.contains("dark")) {
-        t.innerHTML = "<span class='toggle-icon'>🌙</span>";
-        localStorage.setItem("theme", "dark");
-    } else {
-        t.innerHTML = "<span class='toggle-icon'>🎮</span>";
-        localStorage.setItem("theme", "light");
-    }
-});
 
 // Ripple Effect for Buttons
 document.querySelectorAll(".btn").forEach(function(e) {
@@ -46,10 +21,10 @@ document.querySelectorAll(".btn").forEach(function(e) {
 function createParticles() {
     const container = document.getElementById('particles');
     const particleColors = [
-        'rgba(157, 78, 221, 0.6)',  // Purple
-        'rgba(0, 245, 255, 0.6)',   // Cyan
-        'rgba(255, 0, 110, 0.6)',   // Pink
-        'rgba(0, 255, 136, 0.6)',   // Green
+        'rgba(0, 102, 255, 0.6)',  // Blue
+        'rgba(0, 200, 255, 0.6)',  // Cyan
+        'rgba(107, 76, 230, 0.6)', // Purple
+        'rgba(0, 255, 136, 0.6)',  // Green
         'rgba(255, 222, 0, 0.6)'    // Yellow
     ];
     
@@ -91,18 +66,10 @@ function typeWriter() {
 }
 
 // Run typing effect after page load
-setTimeout(typeWord, 500);
-
-function typeWord() {
-    const title = document.querySelector('.title');
-    if (!title) return;
-    
-    title.style.transition = 'opacity 0.5s';
-    title.style.opacity = '1';
-}
+setTimeout(typeWriter, 500);
 
 // Add hover sound effect (optional - disabled by default)
-const hoverSound = null; // Add your sound URL here if you want
+const hoverSound = null;
 
 document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('mouseenter', function() {
@@ -130,7 +97,7 @@ function createCursorParticle(x, y) {
         top: ${y}px;
         width: 6px;
         height: 6px;
-        background: rgba(157, 78, 221, 0.6);
+        background: rgba(0, 102, 255, 0.6);
         border-radius: 50%;
         pointer-events: none;
         z-index: 10000;
@@ -152,7 +119,6 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Console message for gamers
-console.log('%c🎮 THE POOR GAMER 🎮', 'font-size: 24px; color: #9d4edd; font-weight: bold;');
-console.log('%cWelcome to my gaming hub!', 'color: #00f5ff;');
-console.log('%cLevel: 99 | Pro Gamer', 'color: #00ff88;');
->>>>>>> f5412a2 (added favicon and background)
+console.log('%c🎮 THE POOR GAMER 🎮', 'font-size: 24px; color: #0066ff; font-weight: bold;');
+console.log('%cWelcome to my gaming hub!', 'color: #00c8ff;');
+console.log('%c101 Subscribe | Pro Gamer', 'color: #00ff88;');
