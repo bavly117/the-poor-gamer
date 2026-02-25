@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
     --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --light-bg: #f8f9fa;
@@ -5,6 +6,35 @@
     --text-dark: #2d3748;
     --text-light: #718096;
     --border-color: #e2e8f0;
+=======
+/* Gaming Theme - Professional Gamer Style - Blue Theme */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Gaming Neon Colors - Blue Theme */
+    --neon-blue: #0066ff;
+    --neon-cyan: #00c8ff;
+    --neon-purple: #6b4ce6;
+    --neon-pink: #ff006e;
+    --neon-green: #00ff88;
+    
+    /* Dark Gaming Background - Blue Theme */
+    --bg-dark: #0a1628;
+    --bg-card: #0d1f3c;
+    --bg-card-hover: #132d52;
+    --border-glow: rgba(0, 102, 255, 0.4);
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+    
+    /* Effects */
+    --glow-blue: 0 0 20px rgba(0, 102, 255, 0.6), 0 0 40px rgba(0, 102, 255, 0.3);
+    --glow-cyan: 0 0 20px rgba(0, 200, 255, 0.6), 0 0 40px rgba(0, 200, 255, 0.3);
+    --glow-purple: 0 0 20px rgba(107, 76, 230, 0.6), 0 0 40px rgba(107, 76, 230, 0.3);
+    
+    /* Transitions */
+>>>>>>> f5412a2 (added favicon and background)
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -17,13 +47,54 @@
 
 body {
     font-family: 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+<<<<<<< HEAD
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     color: var(--text-dark);
+=======
+    background: var(--bg-dark);
+    color: var(--text-primary);
+>>>>>>> f5412a2 (added favicon and background)
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: var(--transition);
+<<<<<<< HEAD
+=======
+    overflow-x: hidden;
+}
+
+/* Animated Gaming Background - Blue */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 80%, rgba(0, 102, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(0, 200, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(107, 76, 230, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -2;
+}
+
+/* Grid Pattern Overlay - Blue */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 /* Wrapper */
@@ -35,6 +106,7 @@ body {
     padding: 40px 20px;
 }
 
+<<<<<<< HEAD
 /* الكارت الأساسي */
 .container {
     background: var(--card-bg);
@@ -46,11 +118,50 @@ body {
     border: 1px solid var(--border-color);
     animation: slideUp 0.6s ease-out;
     backdrop-filter: blur(10px);
+=======
+/* الكارت الأساسي - Gaming Style - Blue */
+.container {
+    background: var(--bg-card);
+    max-width: 480px;
+    width: 100%;
+    padding: 50px 35px;
+    border-radius: 24px;
+    box-shadow: 
+        0 0 0 1px var(--border-glow),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    animation: slideUp 0.6s ease-out, glowPulse 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-cyan), var(--neon-purple), var(--neon-blue));
+    background-size: 300% 100%;
+    animation: gradientFlow 3s linear infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 0 1px var(--border-glow), 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+    50% { box-shadow: 0 0 30px rgba(0, 102, 255, 0.2), 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 /* قسم البروفايل */
 .profile-section {
     margin-bottom: 40px;
+<<<<<<< HEAD
 }
 
 /* صورة البروفايل */
@@ -60,10 +171,28 @@ body {
     border-radius: 50%;
     border: 4px solid transparent;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+=======
+    text-align: center;
+}
+
+/* صورة البروفايل - Gaming Style - Blue */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background: 
+        linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+        linear-gradient(135deg, var(--neon-blue), var(--neon-cyan), var(--neon-purple)) border-box;
+    box-shadow: 
+        0 10px 40px rgba(0, 102, 255, 0.3),
+        0 0 60px rgba(0, 200, 255, 0.1);
+>>>>>>> f5412a2 (added favicon and background)
     object-fit: cover;
     margin: 0 auto 25px;
     display: block;
     transition: var(--transition);
+<<<<<<< HEAD
 }
 
 .profile-pic:hover {
@@ -80,10 +209,56 @@ body {
     background-clip: text;
     margin-bottom: 10px;
     text-align: center;
+=======
+    position: relative;
+}
+
+.profile-pic::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-cyan));
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: var(--glow-blue);
+}
+
+.profile-pic:hover::after {
+    opacity: 0.8;
+}
+
+/* العنوان - Gaming Font */
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.title::after {
+    content: '🎮';
+    margin-right: 8px;
+    -webkit-text-fill-color: initial;
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 .subtitle {
     text-align: center;
+<<<<<<< HEAD
     color: var(--text-light);
     font-size: 14px;
     font-weight: 500;
@@ -95,11 +270,46 @@ body {
     display: flex;
     flex-direction: column;
     gap: 14px;
+=======
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Gaming Level Badge - Blue */
+.gaming-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.2), rgba(0, 200, 255, 0.1));
+    border: 1px solid var(--border-glow);
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 12px;
+    color: var(--neon-cyan);
+    font-weight: 600;
+}
+
+.gaming-badge .level {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: var(--neon-green);
+}
+
+/* تنسيق الأزرار - Gaming Style */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 .btn {
     text-decoration: none;
     color: white;
+<<<<<<< HEAD
     padding: 14px 20px;
     border-radius: 12px;
     font-weight: 600;
@@ -107,18 +317,40 @@ body {
     align-items: center;
     justify-content: center;
     gap: 12px;
+=======
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+>>>>>>> f5412a2 (added favicon and background)
     transition: var(--transition);
     border: none;
     cursor: pointer;
     font-size: 15px;
     position: relative;
     overflow: hidden;
+<<<<<<< HEAD
 }
 
 .btn i {
     font-size: 18px;
 }
 
+=======
+    font-family: 'Cairo', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+/* Button Glow Effect */
+>>>>>>> f5412a2 (added favicon and background)
 .btn::before {
     content: '';
     position: absolute;
@@ -126,15 +358,21 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.2);
     transition: var(--transition);
     z-index: -1;
+=======
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 .btn:hover::before {
     left: 100%;
 }
 
+<<<<<<< HEAD
 /* ألوان المنصات */
 .facebook {
     background: linear-gradient(135deg, #1877F2 0%, #0a66c2 100%);
@@ -193,21 +431,121 @@ body {
     color: var(--text-light);
     font-size: 14px;
     border-top: 1px solid var(--border-color);
+=======
+/* ألوان المنصات - Gaming Style */
+.facebook {
+    background: linear-gradient(135deg, #1877F2 0%, #0d5bbd 100%);
+    box-shadow: 0 8px 25px rgba(24, 119, 242, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.facebook:hover {
+    box-shadow: 0 8px 35px rgba(24, 119, 242, 0.5), 0 0 30px rgba(24, 119, 242, 0.3);
+}
+
+.instagram {
+    background: linear-gradient(135deg, #FF4500 0%, #FF5500 50%, #FF3300 100%);
+    background-size: 200% 200%;
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.instagram:hover {
+    background-position: right center;
+    box-shadow: 0 8px 35px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255, 69, 0, 0.4);
+}
+
+.youtube {
+    background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%);
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.youtube:hover {
+    box-shadow: 0 8px 35px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    letter-spacing: 2px;
+}
+
+.btn:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* Gaming Icon Effects */
+.btn i {
+    transition: var(--transition);
+}
+
+.btn:hover i {
+    transform: scale(1.2);
+    text-shadow: 0 0 20px currentColor;
+}
+
+
+/* الفوتر - Gaming Style - Blue */
+.footer {
+    text-align: center;
+    padding: 30px 20px 25px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 .footer .highlight {
     font-weight: 700;
+<<<<<<< HEAD
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+=======
+    background: linear-gradient(135deg, var(--neon-blue), var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.footer-tagline {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    color: var(--neon-blue);
+    margin-top: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+    52% { opacity: 1; }
+    54% { opacity: 0.5; }
+    56% { opacity: 1; }
+>>>>>>> f5412a2 (added favicon and background)
 }
 
 /* تأثيرات الـ Animation */
 @keyframes slideUp {
     from {
         opacity: 0;
+<<<<<<< HEAD
         transform: translateY(30px);
+=======
+        transform: translateY(40px);
+>>>>>>> f5412a2 (added favicon and background)
     }
     to {
         opacity: 1;
@@ -215,6 +553,7 @@ body {
     }
 }
 
+<<<<<<< HEAD
 /* تأثير الموجات */
 .ripple {
     position: absolute;
@@ -226,12 +565,59 @@ body {
 }
 
 @keyframes ripple-animation {
+=======
+/* Floating Particles for Gaming Effect - Blue */
+.particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: var(--neon-blue);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.6;
+    animation: float 6s infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.6;
+    }
+    25% {
+        transform: translateY(-30px) translateX(10px);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-60px) translateX(-10px);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-30px) translateX(15px);
+        opacity: 0.4;
+    }
+}
+
+/* تأثير الموجات - Gaming Style */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0);
+    animation: rippleGaming 0.6s ease-out;
+    pointer-events: none;
+    box-shadow: 0 0 20px currentColor;
+}
+
+@keyframes rippleGaming {
+>>>>>>> f5412a2 (added favicon and background)
     to {
         transform: scale(4);
         opacity: 0;
     }
 }
 
+<<<<<<< HEAD
 /* الوضع المظلم */
 body.dark {
     background: linear-gradient(135deg, #0f172a 0%, #1a202c 100%);
@@ -266,10 +652,17 @@ body.dark .profile-pic {
 @media (max-width: 600px) {
     .container {
         padding: 35px 20px;
+=======
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 35px 22px;
+>>>>>>> f5412a2 (added favicon and background)
         margin: 20px;
     }
 
     .title {
+<<<<<<< HEAD
         font-size: 24px;
     }
 
@@ -280,14 +673,190 @@ body.dark .profile-pic {
 
     .btn {
         padding: 12px 16px;
+=======
+        font-size: 20px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .btn {
+        padding: 14px 20px;
+>>>>>>> f5412a2 (added favicon and background)
         font-size: 14px;
     }
 
     .theme-toggle {
         top: 15px;
         right: 15px;
+<<<<<<< HEAD
         width: 45px;
         height: 45px;
         font-size: 18px;
     }
 }
+=======
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+    
+    .gaming-badge {
+        padding: 6px 15px;
+        font-size: 11px;
+    }
+}
+
+/* Gaming Cursor Effect */
+body {
+    cursor: default;
+}
+
+.btn, .theme-toggle {
+    cursor: pointer;
+}
+
+/* Scanline Effect */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+}
+
+/* Light Mode Override */
+body.light {
+    --bg-dark: #0a1628;
+    --bg-card: #0d1f3c;
+    --bg-card-hover: #132d52;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0b0;
+}
+
+/* Corner Decorations - Blue */
+.corner-decor {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--neon-blue);
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.container:hover .corner-decor {
+    opacity: 1;
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+.corner-decor.top-left {
+    top: 12px;
+    left: 12px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 8px 0 0 0;
+}
+
+.corner-decor.top-right {
+    top: 12px;
+    right: 12px;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0 8px 0 0;
+}
+
+.corner-decor.bottom-left {
+    bottom: 12px;
+    left: 12px;
+    border-right: none;
+    border-top: none;
+    border-radius: 0 0 0 8px;
+}
+
+.corner-decor.bottom-right {
+    bottom: 12px;
+    right: 12px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 8px 0;
+}
+
+/* Gaming Stats Section - Blue */
+.gaming-stats {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-glow);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background: rgba(0, 102, 255, 0.1);
+    border-radius: 50px;
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    background: rgba(0, 102, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.stat-item i {
+    color: var(--neon-cyan);
+    font-size: 14px;
+}
+
+.stat-item:hover i {
+    animation: pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Toggle Icon Animation */
+.toggle-icon {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover .toggle-icon {
+    transform: rotate(360deg);
+}
+
+/* Responsive Stats */
+@media (max-width: 600px) {
+    .gaming-stats {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .stat-item {
+        width: 100%;
+        justify-content: center;
+    }
+}
+>>>>>>> f5412a2 (added favicon and background)
