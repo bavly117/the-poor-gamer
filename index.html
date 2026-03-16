@@ -25,6 +25,8 @@
             <div class="profile-section">
                 <img src="1.jpg" alt="صورتي" class="profile-pic">
                 <h1 class="title">The Poor Gamer</h1>
+                
+
                 <p class="subtitle">Follow me on all social media - تابعني على جميع المنصات</p>
                 
                 <!-- Gaming Level Badge -->
@@ -68,7 +70,22 @@
         <p class="footer-tagline">Gaming Since 2024</p>
     </footer>
 
-    <script src="protect.js" defer></script>
     <script src="script.js" defer></script>
+    <script>
+        // F12 + Right-click protection: Normal page first, protect.html on F12 or right-click
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || e.keyCode === 123) {
+                e.preventDefault();
+                location.href = 'protect.html';
+            }
+        }, true);
+        
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            location.href = 'protect.html';
+        });
+    </script>
+
+
 </body>
 </html>
