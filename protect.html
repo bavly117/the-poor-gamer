@@ -386,6 +386,25 @@
             e.preventDefault();
         });
 
+        // Auto-redirect after 10s inactivity
+        let inactivityTimer;
+        function resetTimer() {
+            clearTimeout(inactivityTimer);
+            inactivityTimer = setTimeout(() => {
+                window.history.back();
+            }, 10000);
+        }
+        document.addEventListener('mousemove', resetTimer);
+        document.addEventListener('keydown', resetTimer);
+        resetTimer();
+
+        // Enhanced protection
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C'))) {
+                e.preventDefault();
+            }
+        });
+
         // Console gaming message
         console.log('%c🎮 THE POOR GAMER - PROTECTED 🎮', 'font-size: 20px; color: #ff006e; font-weight: bold;');
         console.log('%cNice try! But this site is protected!', 'color: #00f5ff;');
